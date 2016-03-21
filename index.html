@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学习CSS 3的新特性</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+        .one {
+            text-align: left;
+        }
+        .one .top {
+            background-color: black;
+            color: white;
+            font-weight: bold;
+        }
+
+        .one table>tbody>tr:nth-child(even) {
+            background-color: grey;
+        }
+        .one table>tbody>tr:nth-child(-n+3){
+            color: red;
+        }
+
+        .two input {
+            width: 200px;
+            transition: width .25s ease-in;
+        }
+        .two input:focus {
+            width: 300px;
+            transition: width .25s ease-in;
+        }
+        .three {
+            position: relative;
+            overflow: hidden;
+        }
+        .three  ul{
+            position: relative;
+            height: 200px;
+            transition: left .25s ease-in;
+        }
+        .three .item {
+            width: 300px;
+            height: 200px;
+        }
+        .three ul li {
+            list-style: none;
+            float: left;
+        }
+        .three .item-1 {
+            background-color: yellow;
+        }
+        .three .item-2 {
+            background-color: blue;
+        }
+        .three .item-3 {
+            background-color: red;
+        }
+        .three .tab ul {
+            position: absolute;
+            top: 160px;
+            left: 200px;
+        }
+        .three .tab ul label {
+            background-color: black;
+            margin-right: 2px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        #b1:checked~ul {
+            left: 0;
+        }
+        #b2:checked~ul {
+            left: -300px;
+        }
+        #b3:checked~ul {
+            left: -600px;
+        }
+    </style>
+</head>
+<body>
+    <h1>demo1</h1>
+    <div class="demo one">
+        <table>
+            <thead>
+                <tr class="top">
+                    <th>排名</th>
+                    <th>网站</th>
+                    <th>热度</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1.</th>
+                    <th>百度前端技术学院</th>
+                    <th>13000</th>
+                </tr>
+                <tr>
+                    <th>2.</th>
+                    <th>百度前端技术学院</th>
+                    <th>13000</th>
+                </tr>
+                <tr>
+                    <th>3.</th>
+                    <th>百度前端技术学院</th>
+                    <th>13000</th>
+                </tr>
+                <tr>
+                    <th>4.</th>
+                    <th>百度前端技术学院</th>
+                    <th>13000</th>
+                </tr>
+                <tr>
+                    <th>5.</th>
+                    <th>百度前端技术学院</th>
+                    <th>13000</th>
+                </tr>
+                <tr>
+                    <th>6.</th>
+                    <th>百度前端技术学院</th>
+                    <th>13000</th>
+                </tr>
+                <tr>
+                    <th>7.</th>
+                    <th>百度前端技术学院</th>
+                    <th>13000</th>
+                </tr>
+                <tr>
+                    <th>8.</th>
+                    <th>百度前端技术学院</th>
+                    <th>13000</th>
+                </tr>
+                <tr>
+                    <th>9.</th>
+                    <th>百度前端技术学院</th>
+                    <th>13000</th>
+                </tr>
+                <tr>
+                    <th>10.</th>
+                    <th>百度前端技术学院</th>
+                    <th>13000</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="demo two">
+        <h1>demo2</h1>
+        <input type="text">
+    </div>
+    <h1>demo3</h1>
+    <div class="demo three">
+        <input type="radio" id="b1" name="t" checked="checked">
+        <input type="radio" id="b2" name="t">
+        <input type="radio" id="b3" name="t">
+        <ul>
+            <li class="item item-1"></li>
+            <li class="item item-2"></li>
+            <li class="item item-3"></li>
+        </ul>
+        <div class="tab">
+            <ul>
+                <label class="tab-1" for="b1">1</label>
+                <label class="tab-1" for="b2">2</label>
+                <label class="tab-1" for="b3">3</label>
+            </ul>
+        </div> 
+    </div>
+</body>
+</html>
